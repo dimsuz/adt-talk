@@ -178,7 +178,7 @@
                       <code data-trim data-noescape class="kotlin">
                         sealed class Optional&lt;A&gt; {
                           object None : Optional&lt;Nothing&gt;()
-                          data class Some(value: A)  : Optional&lt;A&gt;()
+                          data class Some&lt;A&gt;(value: A)  : Optional&lt;A&gt;()
                         }
                       </code>
                     </pre>
@@ -252,6 +252,42 @@
                       <span class="fragment hljs-number">(A × B) + (C × D)</span>
                     </p>
                   </section>
+                  <section>
+                    <pre>
+                      <code data-trim data-noescape class="kotlin">
+                        fun callMe(a: A): B
+                        // или
+                        val callMe: (A) -> B
+                      </code>
+                    </pre>
+                    <p>
+                      <span class="fragment hljs-number">B<sup>A</sup></span>
+                    </p>
+                  </section>
+                </section>
+                <section>
+                  <h3>«Зачем <span class="hljs-number">мне</span> это знать?»</h3>
+                  <img src="images/whatever.jpg" height="300">
+                </section>
+                <section>
+                  <img src="images/shrug.svg" height="300">
+                </section>
+                <section>
+                  <ul>
+                    <li>Интересно (теория + фундамент)</li>
+                    <li class="fragment">Терминология: «sum types», «product types», «union types»</li>
+                    <li class="fragment">Влияние на дизайн и фичи языков программирования (Java, Kotlin, Typescript, Dart)</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>Ссылки</h3>
+                  <ul>
+                    <li>Исходники презы:<br>
+                      <a href="https://github.com/dimsuz/adt-talk">https://github.com/dimsuz/adt-talk</a></li>
+                    <li>Статья <span class="hljs-title">by Joel Burget</span> про ADT (+ ряд тейлора, zippers, дифференцирование)<br>
+                      <a href="https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types">https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types</a>
+                    </li>
+                  </ul>
                 </section>
             </div>
         </div>

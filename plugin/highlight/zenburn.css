@@ -12,6 +12,12 @@ code {
   line-height: 1.4em;
 }
 
+table,
+tr,
+td {
+  border: none !important;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
